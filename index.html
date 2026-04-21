@@ -1340,8 +1340,9 @@ setTimeout(function() {
   function toggleDetail(id,item){
     const detail=document.getElementById(id);
     const isOpen=detail.classList.contains('open');
-    etail').forEach(d=>d.classList.remove('open'));
-    document.querySelectorAll('.course-card').forEach(i=>i.classList.remove('active'));
+    document.querySelectorAll('.cp-detail').forEach(d=>d.classList.remove('open'));
+    document.querySelectorAll('.cp-item').forEach(i=>i.classList.remove('active'));
+    if(!isOpen){detail.classList.add('open');item.classList.add('active');}
   }
 
   // Filter for course cards
